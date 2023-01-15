@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- <img class="logo" src="Unifylogo-01.svg" alt=""> -->
+        </div>
+
+    </div>
+    <div class="row h-100 main-body">
+      <div class="col-1 nav-bar">
+        <div class="row mt-2 m-1" style="width: auto;">
+          <div class="d-flex py-2">
+            <img class="logo" src="./images/Unifylogo-01.svg" alt="">
+          </div>
+          <hr>
+          <div class="col ml-2 d-flex flex-column align-items-center nav-bar-items">
+  
+            <div class="d-flex  py-2">
+              <a href="home.html">
+                <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                  <span class="nav-btn-text">Back to home</span>
+                </button>
+              </a>
+            </div>
+            <div class="d-flex  py-2">
+              <a href="userProfile.html">
+                <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                  <span class="material-icons-round">local_taxi</span>
+                  <span class="nav-btn-text">Update Profile</span>
+                </button>
+              </a>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <span class="" style="font-size: small; text-align: center;">My Services</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="hotelbookingForm.html"><span style="font-size: small;">Manage Hotels</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Manage Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Manage Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <span class="" style="font-size: small;">Received Bookings</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="viewBookingForm.html"><span style="font-size: small;">Hotel</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <span class="" style="font-size: small;">My Bookings</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="receivedBookingForm.html"><span style="font-size: small;">Hotel</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex  py-2" id="divLoginLogout">
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-10 details">
+
+            <section class="content-header mt-4">
+                <div class="container-fluid">
+                  <div class="row mb-2">
+                    <div class="col-sm-6">
+                      <h1>View Bookings</h1>
+                    </div>
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb justify-content-end">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">View Bookings</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.container-fluid -->
+              </section>
+              <hr />
+              <div class="card ms-sm-auto mb-5">
+                <div class="card-header">View Bookings</div>
+                <div class="card-body">
+                  <table class="table-sm table-bordered table-responsive-md d-block">
+                    <thead>
+                      <tr>
+                        <th>BOOKING_ID</th>
+                        <th>FIRST_NAME</th>
+                        <th>LAST_NAME</th>
+                        <th>MOBILE_NO</th>
+                        <th>EMAIL</th>
+                        <th>ROOM_TYPE</th>
+                        <th>NO_OF_ROOMS</th>
+                        <th>NO_OF_PEOPLE</th>
+                        <th>CHECK_IN</th>
+                        <th>CHECK_OUT</th>
+                        <th>ARRIVAL_TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody id="viewBooking">
+                    </tbody>
+                  </table>
+                  </div>
+                  </div>
+        </div>
+</div>
+<script>
+    if (sessionStorage.getItem("UserDetailsCode")) {
+        alert(sessionStorage.getItem("UserDetailsCode"));
+        document.getElementById("divLoginLogout").innerHTML = '<button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0" onclick="LogoutUser();"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Logout</span> </button>'
+    }
+    else {
+        document.getElementById("divLoginLogout").innerHTML = '<a href="/log reg/login.html"> <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Login</span> </button> </a>'
+    }
+
+    function LogoutUser() {
+        sessionStorage.removeItem("UserDetailsCode");
+        location.replace("/log reg/login.html");
+    }
+</script>
+<script src="Unify\viewBookingForm.js"></script>
+<script src="\dbconfig.js"></script>
+</body>
+
+</html>

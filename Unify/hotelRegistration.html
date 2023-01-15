@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="\UnifyAdmin\dbconfig.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+<body>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- <img class="logo" src="Unifylogo-01.svg" alt=""> -->
+        </div>
+
+    </div>
+    <div class="row h-100 main-body">
+      <div class="col-1 nav-bar">
+        <div class="row mt-2 m-1" style="width: auto;">
+          <div class="d-flex py-2">
+            <img class="logo" src="./images/Unifylogo-01.svg" alt="">
+          </div>
+          <hr>
+          <div class="col ml-2 d-flex flex-column align-items-center nav-bar-items">
+  
+            <div class="d-flex  py-2">
+              <a href="home.html">
+                <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                  <span class="nav-btn-text">Back to home</span>
+                </button>
+              </a>
+            </div>
+            <div class="d-flex  py-2">
+              <a href="userProfile.html">
+                <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                  <span class="material-icons-round">local_taxi</span>
+                  <span class="nav-btn-text">Update Profile</span>
+                </button>
+              </a>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <span class="" style="font-size: small; text-align: center;">My Services</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="hotelbookingForm.html"><span style="font-size: small;">Manage Hotels</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Manage Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Manage Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <span class="" style="font-size: small;">Received Bookings</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="viewBookingForm.html"><span style="font-size: small;">Hotel</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex py-2">
+              <div class="accordion-item m-auto">
+                <h2 class="accordion-header m-auto" id="flush-headingOne">
+                  <span class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <span class="" style="font-size: small;">My Bookings</span>
+                  </span>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <a class="nav-link" href="receivedBookingForm.html"><span style="font-size: small;">Hotel</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Restaurents</span></a>
+                    <a class="nav-link" href="#"><span style="font-size: small;">Taxi</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex  py-2" id="divLoginLogout">
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-10 details">
+
+            <section class="content-header mt-4">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Configure Hotel</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb justify-content-end">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Configure Hotel</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <hr />
+            <div class="card ms-sm-auto mb-5">
+                <div class="card-header">Configure Hotel</div>
+                <div class="card-body">
+                    <form name="hotelBookingForm" id="hotelBookingForm" method="post">
+                        <h3>Hotel Information</h3>
+                        <hr>
+                        <br>
+                        <div class="form-outline flex-fill mb-3">
+                            <label class="form-label" for="form3Example1c">Registration Code</label>
+                            <input type="text" id="HotelCode" name="HotelCode" class="form-control" readonly />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Hotel Name</label>
+                            <input type="text" class="form-control" name="HotelName" id="HotelName" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Hotel Location</label>
+                            <input type="text" class="form-control" name="HotelLocation" id="HotelLocation" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Select Hotel Class</label>
+                            <select class="form-control" aria-label="Default select example" name="HotelClass"
+                                id="HotelClass">
+                                <option selected>Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Telephone Number</label>
+                            <input type="tel" class="form-control" name="HotelTelNo" id="HotelTelNo" />
+                            <div id="emailHelp" class="form-text">
+                                We will never share your Telephone number with anyone else.
+                            </div>
+                        </div>
+                        <br>
+                        <h3>Room Summary</h3>
+                        <hr>
+                        <br>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="budget">Room Budget</label>
+                              <input type="text" class="form-control" id="Budget" name="Budget" placeholder="Room Budget">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="inputPassword4">Currency Unit</label>
+                              <select class="form-control"aria-label="Default select example" name="CurrencyCode"
+                                id="CurrencyCode">
+                                <option selected>Select</option>
+                                <option value="CUR1">USD</option>
+                                <option value="CUR2">Euro</option>
+                                <option value="CUR3">Sri Lankan Rupees</option>
+                            </select>
+                            </div>
+                          </div>
+                          <h5>Ammerities</h5>
+                          <br>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="FreeWIFI" value="">
+                            <label class="form-check-label" for="FreeWIFI">Free Wi-FI</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\wifi.png" alt="">
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="AirConditiond" value="">
+                            <label class="form-check-label" for="AirConditiond">Air Conditioned</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\air_conditioner.png" alt="">
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="FreeBreakfast" value="">
+                            <label class="form-check-label" for="FreeBreakfast">Free Breakfast</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\breakfast.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="TeaCoffee" value="">
+                            <label class="form-check-label" for="TeaCoffee">Tea Coffee</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\teacoffee.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Bar" value="">
+                            <label class="form-check-label" for="Bar">Bar</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\bar.png" alt="">
+                          </div>
+                          <br>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="RoomService" value="">
+                            <label class="form-check-label" for="RoomService">Room Service</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\room_service.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Tv" value="">
+                            <label class="form-check-label" for="Tv">TV</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\television.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Pool" value="">
+                            <label class="form-check-label" for="Pool">Pool</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\pool.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Spa" value="">
+                            <label class="form-check-label" for="Spa">Spa</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\spa.png" alt="">
+                          </div>
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="Parking" value="">
+                            <label class="form-check-label" for="Parking">Parking</label>&nbsp;<img class="img-fluid" style="height: 18px; width: 18px;" src="\cardImg\parking.png" alt="">
+                          </div>
+                          <br>
+                          <br>
+                        <button class="btn btn-primary">
+                            Register Hotel
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+<script>
+    if (sessionStorage.getItem("UserDetailsCode")) {
+        alert(sessionStorage.getItem("UserDetailsCode"));
+        document.getElementById("divLoginLogout").innerHTML = '<button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0" onclick="LogoutUser();"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Logout</span> </button>'
+    }
+    else {
+        document.getElementById("divLoginLogout").innerHTML = '<a href="/log reg/login.html"> <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Login</span> </button> </a>'
+    }
+
+    function LogoutUser() {
+        sessionStorage.removeItem("UserDetailsCode");
+        location.replace("/log reg/login.html");
+    }
+</script>
+<script src="\Unify\hotelRegistration.js"></script>
+</body>
+
+</html>

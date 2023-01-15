@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- <img class="logo" src="Unifylogo-01.svg" alt=""> -->
+        </div>
+
+    </div>
+    <div class="row h-100 main-body">
+        <div class="col-1 nav-bar">
+            <div class="row">
+                <div class="d-flex py-2">
+                    <img class="logo" src="./images/Unifylogo-01.svg" alt="">
+                </div>
+                <hr>
+                <div class="col ml-2 d-flex flex-column align-items-center nav-bar-items">
+
+                    <div class="d-flex py-2"><a href="userProfile.html"> <img src="https://img.icons8.com/fluency/000000/user-male-circle.png"
+                            class="rounded-circle" height="36px" width="39px" alt="" loading="lazy" style="margin-right: auto; margin-left: auto;"/></a>
+                    </div>
+                    <div class="d-flex py-2">
+                        <a href="hotel.html">
+                            <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                                <span class="material-icons-round">luggage</span>
+                                <span class="nav-btn-text">Travel</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="d-flex  py-2">
+                        <a href="hotel.html">
+                            <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                                <span class="material-icons-round">hotel</span>
+                                <span class="nav-btn-text">Hotels</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="d-flex  py-2">
+                        <a href="hotel.html">
+                            <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                                <span class="material-icons-round">local_taxi</span>
+                                <span class="nav-btn-text">Taxi</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="d-flex  py-2">
+                        <a href="hotel.html">
+                            <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0">
+                                <span class="material-icons-round">restaurant_menu </span>
+                                <span class="nav-btn-text">Restaurants</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="d-flex  py-2" id="divLoginLogout">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 details">
+            <div class="row banner">
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                    <div class="d-flex justify-content-center flex-column">
+                        <h1>Planning a trip?</h1>
+                        <span>Join us</span>
+                        <button class="Book-btn d-flex align-items-center py-3">
+                            <span class="px-4">Get Stared</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex flex-column p-4 mt-4 corora-para">
+                <h5>Travel update</h5>
+                <span class="covid">Coronavirus disease (COVID-19) may impact travel. <a class="c-link" target="_blank"
+                        href="https://www.presidentsoffice.gov.lk/index.php/covid-19-dashboard/">See travel advice</a></span>
+            </div>
+
+            <div class="d-flex flex-column p-0 pt-4">
+                <h2>Room List</h2>
+            </div>
+            <div class="d-flex flex-column pt-0 pb-3">
+                <div class="row" id="RoomDiv">
+                </div>
+            </div>
+
+            <script>
+                if (sessionStorage.getItem("userDetailsCode")) {
+                    document.getElementById("divLoginLogout").innerHTML = '<button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0" onclick="LogoutUser();"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Logout</span> </button>'
+                }
+                else {
+                    document.getElementById("divLoginLogout").innerHTML = '<a href="/log reg/login.html"> <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Login</span> </button> </a>'
+                }
+
+                function LogoutUser() {
+                    sessionStorage.removeItem("userDetailsCode");
+                    location.replace("/log reg/login.html");
+                }
+            </script>
+            
+            <script src="\dbconfig.js"></script>
+            <script src="roomList.js"></script>
+</body>
+
+</html>

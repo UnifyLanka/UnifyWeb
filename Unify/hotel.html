@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Common</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon.png" />
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+</head>
+
+<body>
+    <div class="row  nav-items">
+        <div class="col-12 mt-2">
+            <h4 class="d-flex justify-content-center align-items-center">Superior Room Riff Hotel</h4>
+        </div>
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <a class="px-4" href="#Overview"><span>Overview</span></a>
+            <a class="px-4" href="#prices"><span>Prices</span></a>
+            <a class="px-4" href="#location"><span>Location</span></a>
+            <a class="px-4" href="#about"><span>About</span></a>
+            <a class="px-4" href="#para"><span>Photos</span></a>
+        </div>
+
+    </div>
+    <div class="carosel">
+        <div class="row carosel-row">
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/H1.jpg" alt="" srcset="">
+            </div>
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/h2.jpg" alt="" srcset="">
+            </div>
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/h3.jpg" alt="" srcset="">
+            </div>
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/h4.jpg" alt="" srcset="">
+            </div>
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/h5.jpg" alt="" srcset="">
+            </div>
+            <div class="col-2 px-0">
+                <img class="hotel-img" src="./Hotel Images/h6.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <a name="Overview"></a>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6 p-3 details">
+            <section>
+                <div class="d-flex justify-content-between">
+                    <div class="hotel-details">
+                        <div>
+                            <h5>Superior Room</h5>
+                        </div>
+                        <div>
+                            <div>
+                                <span>5-star hotel</span>
+                            </div>
+                            <div>
+                                <span>Heritance Kandalama 11,</span>
+                                <span>Dambulla,</span>
+                                <span>21106</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex mt-2">
+                    <a class="pr-2" href="https://www.heritancehotels.com/kandalama/">
+                        <div class="d-flex chips align-items-center justify-content-between px-2">
+                            <span class="material-icons-round">travel_explore</span>
+                            <span class="chips-text">Website</span>
+                        </div>
+                    </a>
+                    <a class="pr-2"
+                        href="https://www.google.com/maps/dir/6.0748319,80.2432832/heritance+kandalama/@6.9661789,79.7740306,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3afca5eed763401b:0x52e38a926b2db14a!2m2!1d80.7079392!2d7.8711647"
+                        target="_blank">
+                        <div class="d-flex chips align-items-center justify-content-between px-2">
+                            <span class="material-icons-round">place</span>
+                            <span class="chips-text">Direction</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+            <section class="hotel-details-sec mt-4">
+                <div class="d-flex">
+                    <span class="d-flex align-items-center justify-content-between facilities mt-1 mr-4">
+                        <div class="d-flex p-2 facilities-body">
+                            <div class="f-icon-body">
+                                <img class="facilities-icons" src="./Hotel Images/spa.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                Spa
+                            </div>
+                        </div>
+                    </span>
+                    <span class="d-flex align-items-center justify-content-between facilities mt-1 mr-4">
+                        <div class="d-flex p-2 facilities-body">
+                            <div class="f-icon-body">
+                                <img class="facilities-icons" src="./Hotel Images/ratings.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                Top-rated
+                            </div>
+                        </div>
+                    </span>
+                    <span class="d-flex align-items-center justify-content-between facilities mt-1 mr-4">
+                        <div class="d-flex p-2 facilities-body">
+                            <div class="f-icon-body">
+                                <img class="facilities-icons" src="./Hotel Images/dining.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                Great dining
+                            </div>
+                        </div>
+                    </span>
+                    <span class="d-flex align-items-center justify-content-between facilities mt-1 mr-4">
+                        <div class="d-flex p-2 facilities-body">
+                            <div class="f-icon-body">
+                                <img class="facilities-icons" src="./Hotel Images/near_public_transit.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                Near public transit
+                            </div>
+                        </div>
+                    </span>
+                    <span class="d-flex align-items-center justify-content-between facilities mt-1 mr-4">
+                        <div class="d-flex p-2 facilities-body">
+                            <div class="f-icon-body">
+                                <img class="facilities-icons" src="./Hotel Images/great_service.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                Great service
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </section>
+        </div>
+    </div>
+    <a name="prices"></a>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6  p-3 Prices">
+            <div class="prices-header">
+                <h2>Booking Form</h2>
+            </div>
+            <div class="bootstrap-iso">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 pl-0">
+                            <form method="post">
+                                <div class="form-group d-flex align-items-center justify-content-start">
+                                    <span class="pr-2 date-picker-text">Check in</span>
+                                    <div class="d-flex align-items-center justify-content-center date-picker">
+                                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY"
+                                            type="date" />
+                                        <span class="material-icons-round date-picker-icon">date_range</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 pl-0">
+                            <form method="post">
+                                <div class="form-group d-flex align-items-center justify-content-start">
+                                    <span class="pr-2 date-picker-text">Check out</span>
+                                    <div class="d-flex align-items-center justify-content-center date-picker">
+                                        <input class="form-control" id="date1" name="date" placeholder="MM/DD/YYY"
+                                            type="date" />
+                                        <span class="material-icons-round date-picker-icon">date_range</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 pl-0">
+                            <div class="form-group d-flex align-items-center justify-content-start">
+                                <span class="pr-2 date-picker-text">Select persons</span>
+                                <select id="Peoples" name="peoples">
+                                    <option value="1">1 person</option>
+                                    <option value="2">2 persons</option>
+                                    <option value="3">3 persons</option>
+                                    <option value="4">4 persons</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="Book-btn d-flex align-items-center">
+                            <span class="px-4">Check Availability</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="location"></a>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6  p-3 location">
+            <div class="location-header">
+                <h2>Location summary</h2>
+            </div>
+            <div class="mb-2">
+                <span class="pr-2 location-text">Great for visitors</span>
+                <div class="location-text-body">In a former colonial-style country house, this upmarket hotel surrounded
+                    by landscaped gardens is 2 km from Nuwara Eliya Golf Club, 8 km from Pidurutalagala mountain and 12
+                    km from Hakgala Botanical Garden.</div>
+            </div>
+            <div class="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=heritance%20kandala&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://123movies-to.org">123 movies</a><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 500px;
+                                width: 600px;
+                            }
+                        </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 500px;
+                                width: 600px;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="about"></a>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6  p-3 location">
+            <div class="location-header">
+                <h2>About this hotel</h2>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6">
+                    <span class="pr-2 location-text">Great for visitors</span>
+                    <div class="about-text-body">In a former colonial-style country house, this upmarket hotel
+                        surrounded by landscaped gardens is 2 km from Nuwara Eliya Golf Club, 8 km from Pidurutalagala
+                        mountain and 12 km from Hakgala Botanical Garden. <br> <br>
+                        Simply decorated rooms with wood floors and ceilings have free Wi-Fi, flat-screen TVs and
+                        sitting areas. Upgrades add 4-poster beds and/or lofted sleeping areas with additional beds. A
+                        warmly decorated suite has a minibar and a living room, a dining table and a sofa. <br> <br>
+
+                        There's a refined restaurant and a traditional British pub. Additional amenities include lush
+                        gardens and a snooker room with an antique table. Parking is free.</div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="about-header mb-3">
+                            <h2>Popular amenities
+                            </h2>
+                        </div>
+                        <ul class="p-0">
+                            <li class="d-flex align-items-center mb-4">
+                                <span class="material-icons-round about-icons">directions_car_filled</span>
+                                <span class="about-text">Parking</span>
+                                <span class="about-text-free">free</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <span class="material-icons-round about-icons">wifi</span>
+                                <span class="about-text">Wi-Fi</span>
+                                <span class="about-text-free">free</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <span class="material-icons-round about-icons">ac_unit</span>
+                                <span class="about-text">Air conditioning</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <span class="material-icons-outlined about-icons"> local_cafe</span>
+                                <span class="about-text">Breakfast</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="about"></a>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6  p-3 location">
+            <div class="location-header">
+                <h2>Photos</h2>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <img class="img-one img-fluid" src="./Hotel Images/H1.jpg" alt="">
+                        </div>
+                        <div class="col-6 mt-3 pr-2">
+                            <img class="img-two img-fluid" src="./Hotel Images/h2.jpg" alt="">
+                        </div>
+                        <div class="col-6 mt-3 pl-2">
+                            <img class="img-two img-fluid" src="./Hotel Images/h3.jpg" alt="">
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+        <script>
+            if (sessionStorage.getItem("userDetailsCode")) {
+                document.getElementById("divLoginLogout").innerHTML = '<button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0" onclick="LogoutUser();"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Logout</span> </button>'
+            }
+            else {
+                document.getElementById("divLoginLogout").innerHTML = '<a href="/log reg/login.html"> <button class="nav-btn d-flex flex-column align-items-center justify-content-center px-0"> <span class="material-icons-round">restaurant_menu </span> <span class="nav-btn-text">Login</span> </button> </a>'
+            }
+
+            function LogoutUser() {
+                sessionStorage.removeItem("userDetailsCode");
+                location.replace("/log reg/login.html");
+            }
+        </script>
+</body>
+
+</html>
