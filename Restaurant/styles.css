@@ -1,0 +1,171 @@
+:root {
+  --padding-card:10px;
+  --bg-color:#FFF2D8;
+  --bg-color-green:#154726;
+  --bg-color-yellow:#FFD550;
+  --bg-color-orange:#F58E43;
+  --border-radius:30px;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  padding: var(--padding-card);
+  background-color: var(--bg-color) !important;
+}
+
+.main .main-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  row-gap: 10px;
+  padding-bottom: 10px;
+}
+
+.main .main-header .header_left video {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.main .main-header .header_right {
+  background-color: var(--bg-color-yellow) !important;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--bg-color-green);
+}
+
+.main .main-header .header_right h3 {
+  font-size: 5.75rem;
+}
+
+.main .main-header .header_right p {
+  font-weight: 500;
+}
+
+.main .main_body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  row-gap: 10px;
+}
+
+.main .main_body .body_left {
+  background-color: var(--bg-color-green);
+  padding: var(--padding-card);
+  border-radius: var(--border-radius);
+}
+
+.main .main_body .body_left p {
+  font-size: 4rem;
+  color: var(--bg-color-yellow);
+  line-height: 1;
+}
+
+.main .main_body .body_left h4 {
+  color: var(--bg-color-yellow);
+}
+
+.main .main_body .body_left img {
+  width: 65px;
+  -webkit-animation: slide1 1s ease-in-out infinite;
+          animation: slide1 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+.main .main_body .body_right {
+  background-color: var(--bg-color-orange);
+  padding: var(--padding-card);
+  border-radius: var(--border-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .main_body .body_right .menu_list .main-course-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+}
+
+.main .main_body .body_right .menu_list .main-course-wrapper .dish-image-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  min-width: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main_body .body_right .menu_list .main-course-wrapper .dish-image-wrapper img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.main .main_body .body_right .menu_list .main-course-wrapper .main-courses-name-wrapper {
+  width: 65%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/*# sourceMappingURL=styles.css.map */
